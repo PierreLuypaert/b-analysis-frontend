@@ -11,6 +11,7 @@ import { AnalysisDetailsComponent } from './components/analysis-details/analysis
 import { PlayerListComponent } from './components/player-list/player-list.component';
 import { PlayerCardComponent } from './components/player-list/player-card/player-card.component';
 import { PlayerDetailsComponent } from './components/player-details/player-details.component';
+import { UploadVideoComponent } from './components/upload-video/upload-video.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { PlayerDetailsComponent } from './components/player-details/player-detai
     AnalysisDetailsComponent,
     PlayerListComponent,
     PlayerCardComponent,
-    PlayerDetailsComponent
+    PlayerDetailsComponent,
+    UploadVideoComponent
   ],
   imports: [
     BrowserModule,
