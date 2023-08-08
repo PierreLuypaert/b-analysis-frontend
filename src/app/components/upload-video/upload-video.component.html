@@ -1,5 +1,5 @@
 <div class="bg-gray-200 h-full w-full flex justify-center relative">
-    <div class="bg-white w-full lg:w-5/12 rounded-lg h-[60%] mt-auto mb-auto p-10 flex flex-col space-y-3">
+    <div class="bg-white w-full lg:w-5/12 rounded-lg min-h-[60%] mt-auto mb-auto p-10 flex flex-col space-y-3 relative">
         <table class="table-auto border-separate border-spacing-y-2">
             <tr>
                 <td>
@@ -32,8 +32,8 @@
                         <span class="whitespace-nowrap">Vidéo</span>
                     </p>
                 </td>
-                <td>
-                    <button class="bg-orange text-whiterounded-lg font-medium font-semibold text-l rounded-lg text-white p-1 m-auto">
+                <td class="w-auto">
+                    <button class="bg-orange text-whiterounded-lg font-medium font-semibold text-l rounded-lg text-white p-1 m-auto w-auto">
                         <p class="text-xl font-medium flex align-items-center mt-2 mr-2">
 
                             <svg class="svg-icon ml-2" viewBox="0 0 25 25" width="25" height="25">
@@ -44,6 +44,96 @@
                 </td>
                 <td><input type="text" class="rounded-lg p-2 w-full border-2" disabled value="video.mp4"></td>
             </tr>
+            
+            <tr>          
+                <td>
+                    <p class="text-xl font-medium flex align-items-center mt-2 mr-2">
+                        <svg class="svg-icon mt-1 mr-1" viewBox="0 0 20 20" width="20" height="20">
+                            <path fill="red" d="M12.443,9.672c0.203-0.496,0.329-1.052,0.329-1.652c0-1.969-1.241-3.565-2.772-3.565S7.228,6.051,7.228,8.02c0,0.599,0.126,1.156,0.33,1.652c-1.379,0.555-2.31,1.553-2.31,2.704c0,1.75,2.128,3.169,4.753,3.169c2.624,0,4.753-1.419,4.753-3.169C14.753,11.225,13.821,10.227,12.443,9.672z M10,5.247c1.094,0,1.98,1.242,1.98,2.773c0,1.531-0.887,2.772-1.98,2.772S8.02,9.551,8.02,8.02C8.02,6.489,8.906,5.247,10,5.247z M10,14.753c-2.187,0-3.96-1.063-3.96-2.377c0-0.854,0.757-1.596,1.885-2.015c0.508,0.745,1.245,1.224,2.076,1.224s1.567-0.479,2.076-1.224c1.127,0.418,1.885,1.162,1.885,2.015C13.961,13.689,12.188,14.753,10,14.753z M10,0.891c-5.031,0-9.109,4.079-9.109,9.109c0,5.031,4.079,9.109,9.109,9.109c5.031,0,9.109-4.078,9.109-9.109C19.109,4.969,15.031,0.891,10,0.891z M10,18.317c-4.593,0-8.317-3.725-8.317-8.317c0-4.593,3.724-8.317,8.317-8.317c4.593,0,8.317,3.724,8.317,8.317C18.317,14.593,14.593,18.317,10,18.317z"></path>                        </svg>
+                        <span class="whitespace-nowrap">Equipes</span>
+                    </p>
+                </td>
+                <td colspan="2">
+                    <div class="flex">
+                        <select class="rounded-lg p-2 w-full border-2"> 
+                            <option value="dog">None</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
+                        <p class="font-medium m-2 bg-orange p-2 rounded-lg text-white">
+                            <span class="whitespace-nowrap">VS</span>
+                        </p>
+                        <select class="rounded-lg p-2 w-full border-2"> 
+                            <option value="dog">None</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr>          
+                <td>
+                </td>
+                <td colspan="2">
+                    <div class="flex">
+                        <select class="rounded-lg p-2 w-full border-2"> 
+                            <option value="dog">None</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
+                        <p class="font-medium m-2 bg-orange p-2 rounded-lg text-white">
+                            <span class="whitespace-nowrap">VS</span>
+                        </p>
+                        <select class="rounded-lg p-2 w-full border-2"> 
+                            <option value="dog">None</option>
+                            <option value="dog">Dog</option>
+                            <option value="cat">Cat</option>
+                            <option value="hamster">Hamster</option>
+                            <option value="parrot">Parrot</option>
+                            <option value="spider">Spider</option>
+                            <option value="goldfish">Goldfish</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr>                
+                <td>
+                    <p class="text-xl font-medium flex align-items-center mt-2 mr-2">
+                        <svg class="svg-icon mt-1 mr-1" viewBox="0 0 20 20" width="20" height="20">
+                            <path fill="red" d="M17.431,2.156h-3.715c-0.228,0-0.413,0.186-0.413,0.413v6.973h-2.89V6.687c0-0.229-0.186-0.413-0.413-0.413H6.285c-0.228,0-0.413,0.184-0.413,0.413v6.388H2.569c-0.227,0-0.413,0.187-0.413,0.413v3.942c0,0.228,0.186,0.413,0.413,0.413h14.862c0.228,0,0.413-0.186,0.413-0.413V2.569C17.844,2.342,17.658,2.156,17.431,2.156 M5.872,17.019h-2.89v-3.117h2.89V17.019zM9.587,17.019h-2.89V7.1h2.89V17.019z M13.303,17.019h-2.89v-6.651h2.89V17.019z M17.019,17.019h-2.891V2.982h2.891V17.019z"></path>                        </svg>
+                        <span class="whitespace-nowrap">Résultat</span>
+                    </p>
+                </td>
+                <td colspan="2">
+                    <div class="flex">
+                        <input type="number" class="rounded-lg p-2 w-full border-2"  placeholder="10"> 
+                        <p class="font-medium m-2 bg-orange p-2 rounded-lg text-white">
+                            <span class="whitespace-nowrap">À</span>
+                        </p>
+                        <input type="number" class="rounded-lg p-2 w-full border-2" placeholder="7">
+                    </div>
+                </td>
+            </tr>
         </table>
+        
+        <button class="flex-none absolute bottom-[30px] right-[50px] bg-orange text-whiterounded-lg font-medium font-semibold text-l rounded-lg text-white p-1 m-auto">
+            <p class="text-xl font-medium flex align-items-center mt-2 mr-2">
+                <svg class="svg-icon ml-2" viewBox="0 0 25 25" width="25" height="25" fill="white">
+                    <path d="M17.218,2.268L2.477,8.388C2.13,8.535,2.164,9.05,2.542,9.134L9.33,10.67l1.535,6.787c0.083,0.377,0.602,0.415,0.745,0.065l6.123-14.74C17.866,2.46,17.539,2.134,17.218,2.268 M3.92,8.641l11.772-4.89L9.535,9.909L3.92,8.641z M11.358,16.078l-1.268-5.613l6.157-6.157L11.358,16.078z"></path>                </svg>
+            </p>
+        </button> 
     </div>
 </div>
