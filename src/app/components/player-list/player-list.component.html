@@ -1,10 +1,5 @@
 <div class="bg-gray-200 h-full w-full grid place-items-center">
     <div class="h-full w-full lg:w-5/12 p-10 overflow-x-scroll no-scrollbar flex flex-col space-y-10">  
-        <app-player-card></app-player-card>
-        <app-player-card></app-player-card>
-        <app-player-card></app-player-card>
-        <app-player-card></app-player-card>
-        <app-player-card></app-player-card>
-        <div style="min-height:50px"></div>
+        <app-player-card *ngFor="let player of players" [player]="player"></app-player-card>
     </div>
 </div>

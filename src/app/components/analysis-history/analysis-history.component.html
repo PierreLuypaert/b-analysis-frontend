@@ -1,11 +1,7 @@
 <div class="bg-gray-200 h-full w-full grid place-items-center">
     <div class="h-full w-full lg:w-5/12 p-10 overflow-x-scroll no-scrollbar flex flex-col space-y-10">  
         <button [routerLink]="['/upload']" class="bg-orange w-full text-white min-h-[50px] rounded-lg font-medium font-semibold text-xl">AJOUTER UN MATCH</button>      
-        <app-analysis-card></app-analysis-card>
-        <app-analysis-card></app-analysis-card>
-        <app-analysis-card></app-analysis-card>
-        <app-analysis-card></app-analysis-card>
-        <app-analysis-card></app-analysis-card>
+        <app-analysis-card *ngFor="let match of matches" [match]="match"></app-analysis-card>
         <div style="min-height:50px"></div>
     </div>
 </div>
