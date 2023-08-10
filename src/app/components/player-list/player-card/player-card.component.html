@@ -1,26 +1,27 @@
 <div class="bg-white rounded-lg h-auto p-5 relative w-full">
     <div class="flex flex-row flex-wrap">
         <p class="text-xl font-medium flex align-items-center">
-            <img class="w-10 h-10 mb-1 mr-2 rounded-full" src="assets/images/person.png"/>
-            Anatole GODARD
+            <img class="w-10 h-10 mb-1 mr-2 rounded-full" src="{{ player.photoUrl }}"/>
+            {{ player.keys }} 
+            {{ player.firstName }} {{ player.lastName | uppercase }} 
              
         </p>
 
         <div class="mt-1 ml-auto">
             <p class="text-sm font-thin flex align-items-center">
-                45 buts marqués
+                {{ player.goalsCount }}  buts marqués
             </p>
             <p class="text-sm font-thin flex align-items-center">
-                45 buts encaissés
+                {{ player.savesCount }} buts arrêtés
             </p>
             <p class="text-sm font-thin flex align-items-center">
-                Ratio M/E : 1.0
+                Ratio M/A : {{ player.goalsCount / player.savesCount | number:'1.2-2' }}
             </p>
         </div>
 
     </div>
 
-    <p class="text-sm font-thin absolute lg:bottom-[10px]">Dernier match le 30 juillet 2023</p>  
+    <p class="text-sm font-thin absolute lg:bottom-[10px]">Dernier match le {{ player.matchLastDate | date: 'dd MMMM yyyy' }}</p>  
     <div class="flex flex-row flex-wrap">
 
         <button class="bg-orange w-full mt-5 lg:mt-0 lg:w-auto h-10 rounded-lg text-white font-medium font-bold ml-auto">

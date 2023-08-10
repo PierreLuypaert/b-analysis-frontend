@@ -1,4 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { DatePipe } from '@angular/common';
+import { Component, Input, OnInit } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+
+import localeFr from '@angular/common/locales/fr'; // Import French locale data
+
+registerLocaleData(localeFr); // Register French locale data
 
 @Component({
   selector: 'app-player-card',
@@ -7,7 +13,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerCardComponent implements OnInit {
 
-  constructor() { }
+  @Input() player: any;
+  
+  constructor(private datePipe: DatePipe) {  }
 
   ngOnInit(): void {
   }

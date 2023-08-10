@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerService } from 'src/app/services/player.service';
 
 @Component({
   selector: 'app-player-list',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./player-list.component.scss']
 })
 export class PlayerListComponent implements OnInit {
-
-  constructor() { }
+  players: any[] = [];
+   
+  constructor(private playerService: PlayerService) { }
 
   ngOnInit(): void {
+    this.fetchPlayers();
   }
 
+  fetchPlayers() {
+    this.playerService.getPlayers().subscribe(
+      response => {
+        this.players = response;
+      },
+      error => {
+        console.error('Error fetching players', error);
+      }
+    );
+  }
 }

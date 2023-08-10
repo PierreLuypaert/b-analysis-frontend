@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,6 +12,8 @@ import { PlayerListComponent } from './components/player-list/player-list.compon
 import { PlayerCardComponent } from './components/player-list/player-card/player-card.component';
 import { PlayerDetailsComponent } from './components/player-details/player-details.component';
 import { UploadVideoComponent } from './components/upload-video/upload-video.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -27,10 +29,11 @@ import { UploadVideoComponent } from './components/upload-video/upload-video.com
     UploadVideoComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DatePipe, { provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
