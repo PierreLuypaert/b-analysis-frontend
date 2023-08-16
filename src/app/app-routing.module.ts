@@ -7,11 +7,12 @@ import { AnalysisDetailsComponent } from './components/analysis-details/analysis
 
 const routes: Routes = [
   { path: 'history', component: AnalysisHistoryComponent },
+  { path: 'history/analysis', component: AnalysisDetailsComponent },
   { path: 'players', component: PlayerListComponent },
   { path: 'upload', component: UploadVideoComponent },
-  { path: 'analysis', component: AnalysisDetailsComponent },
   { path: '', redirectTo: '/history', pathMatch: 'full' }, // Redirect to 'history' by default
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

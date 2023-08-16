@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { LocalStorageService } from 'src/app/services/local-storage.service';
 
 @Component({
   selector: 'app-analysis-details',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnalysisDetailsComponent implements OnInit {
 
-  constructor() { }
+  match: any;
 
-  ngOnInit(): void {
+  constructor(private route: ActivatedRoute, private localStorageService: LocalStorageService) {}
+
+  ngOnInit() {
+    this.match = this.localStorageService.getMatch();
   }
 
 }

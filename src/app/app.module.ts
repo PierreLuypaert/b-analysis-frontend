@@ -15,6 +15,7 @@ import { UploadVideoComponent } from './components/upload-video/upload-video.com
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatchChartComponent } from './components/analysis-details/match-chart/match-chart.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PlayerListComponent,
     PlayerCardComponent,
     PlayerDetailsComponent,
-    UploadVideoComponent
+    UploadVideoComponent,
+    MatchChartComponent
   ],
   imports: [
     HttpClientModule,

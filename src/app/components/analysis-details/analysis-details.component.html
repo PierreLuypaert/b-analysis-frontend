@@ -1,13 +1,13 @@
 <div class="bg-gray-200 h-full w-full grid place-items-center">
-    <div class="h-full w-full lg:w-7/12 p-10 overflow-x-scroll no-scrollbar flex flex-col space-y-10">  
+    <div class="h-full w-full lg:w-7/12 p-10 overflow-x-scroll no-scrollbar flex flex-col space-y-10 min-h-screen relative">  
         <div class="bg-white h-[200px] rounded-lg p-5">
             <div class="flex lg:flex-row flex-col">
                 <div class="flex-grow flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="your-image-source.jpg" alt="Profile Image"/>
-                    <span class="flex-grow ml-2 text-xl font-bold whitespace-nowrap text-blue-600">Joueur 1</span>
+                    <img class="w-10 h-10 rounded-full" src="{{ match.redDefender.photoUrl }}" alt="Profile Image"/>
+                    <span class="flex-grow ml-2 text-xl font-bold whitespace-nowrap text-blue-600">{{ match.redAttacker.firstName }}</span>
                 </div>
                 <div class="flex-grow flex items-center">
-                    <img class="w-10 h-10 rounded-full" src="your-image-source.jpg" alt="Profile Image"/>
+                    <img class="w-10 h-10 rounded-full" src="{{ match.redAttacker.photoUrl }}" alt="Profile Image"/>
                     <span class="flex-grow ml-2 text-xl font-bold whitespace-nowrap text-blue-600">Joueur 2</span>
                 </div>
                 <div class="flex-grow flex items-center">
@@ -15,16 +15,16 @@
                 </div>
                 <div class="flex-grow flex items-center">
                     <span class="flex-grow mr-2 text-xl text-right font-bold whitespace-nowrap text-red-600">Joueur 3</span>
-                    <img class="w-10 h-10 rounded-full" src="your-image-source.jpg" alt="Profile Image"/>
+                    <img class="w-10 h-10 rounded-full" src="{{ match.blueAttacker.photoUrl }}" alt="Profile Image"/>
                 </div>
                 <div class="flex-grow flex items-center">
                     <span class="flex-grow mr-2 text-xl text-right font-bold whitespace-nowrap text-red-600">Joueur 4</span>
-                    <img class="w-10 h-10 rounded-full" src="your-image-source.jpg" alt="Profile Image"/>
+                    <img class="w-10 h-10 rounded-full" src="{{ match.blueDefender.photoUrl }}" alt="Profile Image"/>
                 </div>
             </div>
         </div>
         <div class="bg-white h-auto rounded-lg">
-            a
+            <app-match-chart></app-match-chart>
         </div>
     </div>
 </div>
