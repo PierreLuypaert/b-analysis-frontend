@@ -26,7 +26,16 @@ export class UploadVideoComponent implements OnInit {
   submitForm() {
     if (this.matchForm.valid) {
       // Handle form submission
-      this.matchService.createMatch(this.matchForm.value);
+      this.matchService.createMatch(this.matchForm.value).subscribe(
+        response => {
+          console.log('Match created successfully', response);
+          // Handle any success actions here
+        },
+        error => {
+          console.error('Error creating match', error);
+          // Handle error actions here
+        }
+      );
       // You can send the form data to a server, perform actions, etc.
     }
   }
