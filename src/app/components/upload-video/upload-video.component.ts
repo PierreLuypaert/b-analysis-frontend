@@ -15,30 +15,29 @@ export class UploadVideoComponent implements OnInit {
     this.matchForm = this.fb.group({
       name: ['', Validators.required],
       description: ['', Validators.required],
-      redScore: ['', Validators.required],
-      blueScore: ['', Validators.required]
+      scoreBlue: ['', Validators.required],
+      scoreRed: ['', Validators.required],
+      videoUrl:['ressources/baby_short.mp4']
     });
    }
 
   ngOnInit(): void {    
   }
 
-  submitForm() {
+  async submitForm() {
     if (this.matchForm.valid) {
-      // Handle form submission
-      this.matchService.createMatch(this.matchForm.value).subscribe(
-        response => {
-          console.log('Match created successfully', response);
-          // Handle any success actions here
-        },
-        error => {
-          console.error('Error creating match', error);
-          // Handle error actions here
-        }
-      );
+      try {
+        await this.matchService.createMatch(this.matchForm.value).toPromise();
+        // Handle any success actions here
+      } catch (error) {
+        console.error('Error creating match', error);
+        // Handle error actions here
+      }
+  
       // You can send the form data to a server, perform actions, etc.
     }
   }
+  
 
 
 }

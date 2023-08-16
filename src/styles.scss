@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
 body {
     width:100%;
     height:100%;

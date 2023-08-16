@@ -36,7 +36,9 @@ import { MatchChartComponent } from './components/analysis-details/match-chart/m
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatTabsModule
   ],
   providers: [DatePipe, { provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]
