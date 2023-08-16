@@ -14,6 +14,7 @@ import { PlayerDetailsComponent } from './components/player-details/player-detai
 import { UploadVideoComponent } from './components/upload-video/upload-video.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,9 @@ import { DatePipe } from '@angular/common';
   imports: [
     HttpClientModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule 
   ],
   providers: [DatePipe, { provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]
