@@ -16,7 +16,7 @@ export class MatchService {
     return this.http.post(`${this.apiUrl}/create`, match);
   }*/
   createMatch(matchData: any): Observable<any> {
-    const url = `${this.apiUrl}/createMatch`; // Replace with your API endpoint
+    const url = `${this.apiUrl}/create`; // Replace with your API endpoint
 
     return this.http.post(url, matchData);
   }

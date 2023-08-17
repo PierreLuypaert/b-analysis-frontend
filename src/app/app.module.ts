@@ -1,6 +1,7 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnalysisHistoryComponent } from './components/analysis-history/analysis-history.component';
@@ -15,7 +16,11 @@ import { UploadVideoComponent } from './components/upload-video/upload-video.com
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatchChartComponent } from './components/analysis-details/match-chart/match-chart.component';
+import { BallSpeedChartComponent } from './components/analysis-details/ball-speed-chart/ball-speed-chart.component';
+import { BallPositionChartComponent } from './components/analysis-details/ball-position-chart/ball-position-chart.component';
+import { BallPossessionChartComponent } from './components/analysis-details/ball-possession-chart/ball-possession-chart.component';
+import { BallShootsChartComponent } from './components/analysis-details/ball-shoots-chart/ball-shoots-chart.component';
+import { BallTimelineChartComponent } from './components/analysis-details/ball-timeline-chart/ball-timeline-chart.component';
 
 @NgModule({
   declarations: [
@@ -29,14 +34,20 @@ import { MatchChartComponent } from './components/analysis-details/match-chart/m
     PlayerCardComponent,
     PlayerDetailsComponent,
     UploadVideoComponent,
-    MatchChartComponent
+    BallSpeedChartComponent,
+    BallPositionChartComponent,
+    BallPossessionChartComponent,
+    BallShootsChartComponent,
+    BallTimelineChartComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   providers: [DatePipe, { provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]
