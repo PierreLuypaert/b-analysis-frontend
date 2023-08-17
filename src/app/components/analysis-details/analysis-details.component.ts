@@ -10,6 +10,7 @@ import { LocalStorageService } from 'src/app/services/local-storage.service';
 export class AnalysisDetailsComponent implements OnInit {
 
   match: any;
+  currentCanvas: 'speed' | 'position' = 'speed';
 
   constructor(private route: ActivatedRoute, private localStorageService: LocalStorageService) {}
 
@@ -17,4 +18,7 @@ export class AnalysisDetailsComponent implements OnInit {
     this.match = this.localStorageService.getMatch();
   }
 
+  changeCanvas(canvasType: 'speed' | 'position'): void {
+    this.currentCanvas = canvasType;
+  }
 }

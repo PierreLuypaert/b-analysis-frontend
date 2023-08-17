@@ -16,7 +16,8 @@ import { UploadVideoComponent } from './components/upload-video/upload-video.com
 import { HttpClientModule } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { MatchChartComponent } from './components/analysis-details/match-chart/match-chart.component';
+import { BallSpeedChartComponent } from './components/analysis-details/ball-speed-chart/ball-speed-chart.component';
+import { BallPositionChartComponent } from './components/analysis-details/ball-position-chart/ball-position-chart.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatchChartComponent } from './components/analysis-details/match-chart/m
     PlayerCardComponent,
     PlayerDetailsComponent,
     UploadVideoComponent,
-    MatchChartComponent
+    BallSpeedChartComponent,
+    BallPositionChartComponent
   ],
   imports: [
     HttpClientModule,

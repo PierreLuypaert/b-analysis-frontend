@@ -2,60 +2,23 @@ import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
 import { MatTabsModule } from '@angular/material/tabs';
 import Chart from 'chart.js/auto';
 @Component({
-  selector: 'app-match-chart',
-  templateUrl: './match-chart.component.html',
-  styleUrls: ['./match-chart.component.scss']
+  selector: 'app-ball-position-chart',
+  templateUrl: './ball-position-chart.component.html',
+  styleUrls: ['./ball-position-chart.component.scss']
 })
 
-export class MatchChartComponent implements OnInit {
+export class BallPositionChartComponent implements OnInit {
   @Input() match: any
-  public chartBallSpeed: any;
   public chartBallPosition: any;
-  currentCanvas: 'speed' | 'position' = 'speed';
 
   ngOnInit(): void {
     this.createChart();
   }
 
-  changeCanvas(canvasType: 'speed' | 'position'): void {
-      this.currentCanvas = canvasType;
-  }
   createChart(){
-    const dataBallSpeed = this.match.ballSpeed;
     const dataBallPosition = this.match.ballPosition;
-    this.chartBallSpeed = new Chart("MyChart", {
-      type: 'line',
-      data: {
-        labels: dataBallSpeed.map(() => ''), // Empty strings for labels
-        datasets: [{
-          label: 'Ball velocity',
-          data: dataBallSpeed,
-          fill: false,
-          borderColor: 'rgb(75, 192, 192)',
-          tension: 0.1
-        }]
-      },
-      options: {
-        aspectRatio:2.5,
-        scales: {
-          y: {
-            title: {
-              display: true,
-              text: 'Vitesse en KM/H'
-            }
-          },
-          x: {
-            title: {
-              display: true,
-              text: 'Temps'
-            }
-          }
-        }
-      }
-      
-    });
-
-    this.chartBallPosition = new Chart("MyChart2", {
+   
+    this.chartBallPosition = new Chart("chartPosition", {
       type: 'scatter',
       data: {
         datasets: [{
