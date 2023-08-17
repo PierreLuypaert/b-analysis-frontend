@@ -1,6 +1,7 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { MatTabsModule } from '@angular/material/tabs';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnalysisHistoryComponent } from './components/analysis-history/analysis-history.component';
@@ -37,8 +38,8 @@ import { MatchChartComponent } from './components/analysis-details/match-chart/m
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   providers: [DatePipe, { provide: LOCALE_ID, useValue: 'fr' }],
   bootstrap: [AppComponent]

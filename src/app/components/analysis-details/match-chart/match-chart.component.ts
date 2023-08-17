@@ -11,11 +11,15 @@ export class MatchChartComponent implements OnInit {
   @Input() match: any
   public chartBallSpeed: any;
   public chartBallPosition: any;
+  currentCanvas: 'speed' | 'position' = 'speed';
 
   ngOnInit(): void {
     this.createChart();
   }
 
+  changeCanvas(canvasType: 'speed' | 'position'): void {
+      this.currentCanvas = canvasType;
+  }
   createChart(){
     const dataBallSpeed = this.match.ballSpeed;
     const dataBallPosition = this.match.ballPosition;
