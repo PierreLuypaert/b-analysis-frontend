@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:5262/api/v1/'
+  apiUrl: 'http://b-analysis-backend:5262/api/v1/'
+
 };
 
 /*
