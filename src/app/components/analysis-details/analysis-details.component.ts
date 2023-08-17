@@ -14,7 +14,7 @@ export class AnalysisDetailsComponent implements OnInit {
   dangerousBallRed : number = 0;
   dangerousBallBlue : number = 0;
   uniquePointList: any;
-  currentCanvas: 'speed' | 'position' | 'possession'  | 'shoots' | 'timeline' = 'speed';
+  currentCanvas: 'speed' | 'position' | 'possession'  | 'shoots' | 'timeline' = 'position';
   actionsRed: any = [];
   actionsBlue: any = [];
 
