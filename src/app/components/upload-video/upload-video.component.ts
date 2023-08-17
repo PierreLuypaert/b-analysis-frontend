@@ -17,7 +17,7 @@ export class UploadVideoComponent implements OnInit {
       description: ['', Validators.required],
       scoreBlue: ['', Validators.required],
       scoreRed: ['', Validators.required],
-      videoUrl:['ressources/baby_short.mp4']
+      videoUrl:['ressources/baby_short4.mp4']
     });
    }
 

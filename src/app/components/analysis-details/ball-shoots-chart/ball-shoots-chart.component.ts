@@ -27,7 +27,7 @@ export class BallShootsChartComponent implements OnInit {
         labels: ["EQUIPE BLEUE", "EQUIPE ROUGE"],
         datasets: [
           {
-            label: "Tirs cadrés",
+            label: "Tir(s) cadré(s)",
             data: [this.dangerousBallBlue, this.dangerousBallRed],
             borderWidth: 2,
             borderRadius: 3,
@@ -35,7 +35,7 @@ export class BallShootsChartComponent implements OnInit {
             backgroundColor: ['rgba(255, 165, 0, 0.6)', 'rgba(255, 165, 0, 0.6)'], // Orange color for Shots on target
           },
           {
-            label: "Buts marqués",
+            label: "But(s) marqué(s)",
             data: [this.scoreBlue, this.scoreRed],
             borderWidth: 2,
             borderRadius: 3,
@@ -54,9 +54,17 @@ export class BallShootsChartComponent implements OnInit {
         scales: {
           x: {
             stacked: true,
+            title: {
+              display: true,
+              text: 'Equipes'
+            }
           },
           y: {
             stacked: true,
+            title: {
+              display: true,
+              text: 'Nombre de tir(s)'
+            }
           },
         },
       },

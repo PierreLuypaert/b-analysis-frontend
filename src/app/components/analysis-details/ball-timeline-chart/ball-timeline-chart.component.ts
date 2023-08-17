@@ -38,7 +38,7 @@ export class BallTimelineChartComponent implements OnInit {
     const datasets = [];
   
     for (const entry of this.actionsBlue.concat(this.actionsRed)) {
-      const eventType = (entry[0] == 'GOAL' ? 'But marqué' : 'Tir cadré');
+      const eventType = (entry[0] == 'GOAL' ? 'But(s) marqué(s)' : 'Tir(s) cadré(s)');
       const eventInterval = entry[1] - 1; // Adjust to 0-based index
   
       if (eventInterval >= 0 && eventInterval < numIntervals) {
@@ -76,9 +76,17 @@ export class BallTimelineChartComponent implements OnInit {
         scales: {
           x: {
             stacked: true,
+            title: {
+              display: true,
+              text: 'Temps'
+            }
           },
           y: {
             stacked: true,
+            title: {
+              display: true,
+              text: 'Nombre de tir(s)'
+            }
           },
         },
       },

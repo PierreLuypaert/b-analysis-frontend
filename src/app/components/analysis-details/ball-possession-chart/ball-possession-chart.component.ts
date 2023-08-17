@@ -44,7 +44,21 @@ export class BallPossessionChartComponent implements OnInit {
           legend: {
             position: 'top',
           }
-        }
+        },
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Equipes'
+            }
+          },
+          y: {
+            title: {
+              display: true,
+              text: 'Pourcentage de possession'
+            }
+          },
+        },
       }
     });
   }

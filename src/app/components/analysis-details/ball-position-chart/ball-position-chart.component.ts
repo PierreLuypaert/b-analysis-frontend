@@ -47,11 +47,21 @@ export class BallPositionChartComponent implements OnInit {
         scales: {
           x: {
             type: 'linear',
-            position: 'bottom'
+            position: 'bottom',
+            min:-100,
+            title: {
+              display: true,
+              text: 'Coordonnées X'
+            }
           },
           y: {
             type: 'linear',
-            position: 'left'
+            position: 'left',
+            min:-100,
+            title: {
+              display: true,
+              text: 'Coordonnées Y'
+            }
           }
         },
         plugins: {
