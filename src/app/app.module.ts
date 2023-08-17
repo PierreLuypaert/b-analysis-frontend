@@ -18,6 +18,9 @@ import { DatePipe } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BallSpeedChartComponent } from './components/analysis-details/ball-speed-chart/ball-speed-chart.component';
 import { BallPositionChartComponent } from './components/analysis-details/ball-position-chart/ball-position-chart.component';
+import { BallPossessionChartComponent } from './components/analysis-details/ball-possession-chart/ball-possession-chart.component';
+import { BallShootsChartComponent } from './components/analysis-details/ball-shoots-chart/ball-shoots-chart.component';
+import { BallTimelineChartComponent } from './components/analysis-details/ball-timeline-chart/ball-timeline-chart.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,10 @@ import { BallPositionChartComponent } from './components/analysis-details/ball-p
     PlayerDetailsComponent,
     UploadVideoComponent,
     BallSpeedChartComponent,
-    BallPositionChartComponent
+    BallPositionChartComponent,
+    BallPossessionChartComponent,
+    BallShootsChartComponent,
+    BallTimelineChartComponent
   ],
   imports: [
     HttpClientModule,

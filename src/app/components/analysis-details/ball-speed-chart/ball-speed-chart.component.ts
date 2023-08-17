@@ -16,21 +16,32 @@ export class BallSpeedChartComponent implements OnInit {
   }
 
   createChart(){
-    const dataBallSpeed = this.match.ballSpeed;
+    const dataBallSpeed = this.match.ballPosition;
+    const pointColors = dataBallSpeed.map((point: number[]) => {
+      const direction = point[3];
+      if (direction == 1) {
+        return 'red';
+      } else {
+        return 'blue';
+      }
+    });
+
     this.chartBallSpeed = new Chart("chartSpeed", {
       type: 'line',
       data: {
-        labels: dataBallSpeed.map(() => ''), // Empty strings for labels
+        labels: Array.from(new Set(dataBallSpeed.map((point: number[]) => point[2]))).map(() => ''), // Empty strings for labels
         datasets: [{
           label: 'Ball velocity',
-          data: dataBallSpeed,
+          data: dataBallSpeed.map((point: number[]) => point[2]),
           fill: false,
+          pointRadius: 5,
           borderColor: 'rgb(75, 192, 192)',
+          backgroundColor: pointColors, // Assign colors based on point[2] values
           tension: 0.1
         }]
       },
       options: {
-        aspectRatio:2.5,
+        aspectRatio: 2.5,
         scales: {
           y: {
             title: {
@@ -46,7 +57,6 @@ export class BallSpeedChartComponent implements OnInit {
           }
         }
       }
-      
     });
   }
 }
